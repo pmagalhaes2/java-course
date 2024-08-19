@@ -31,14 +31,15 @@ public class Program {
 
         System.out.print("Enter the employee id thar will have salary increase: ");
         int id = sc.nextInt();
-        System.out.print("Enter the percentage: ");
-        double percentage = sc.nextDouble();
+
 
         Optional<Employee> optionalEmployee = Arrays.stream(employees)
                 .filter(employee -> employee.getId() == id)
                 .findFirst();
 
         if (optionalEmployee.isPresent()) {
+            System.out.print("Enter the percentage: ");
+            double percentage = sc.nextDouble();
             Employee foundedEmployee = optionalEmployee.get();
             foundedEmployee.increase(percentage);
         } else {
@@ -49,8 +50,6 @@ public class Program {
         for (Employee e : employees) {
             System.out.println(e.toString());
         }
-
         sc.close();
-
     }
 }
