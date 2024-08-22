@@ -32,6 +32,7 @@ public class Program {
         BusinessAccount acc4 = (BusinessAccount) acc2;
         acc4.loan(100.0);
 
+        sc.close();
 
     }
 }
