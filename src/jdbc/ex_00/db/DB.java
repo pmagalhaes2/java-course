@@ -1,4 +1,4 @@
-package jdbc.db;
+package jdbc.ex_00.db;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class DB {
     }
 
     private static Properties loadProperties() {
-        try (FileInputStream fs = new FileInputStream("src/jdbc/db.properties")) {
+        try (FileInputStream fs = new FileInputStream("src/jdbc/ex_00/db.properties")) {
             Properties props = new Properties();
             props.load(fs);
             return props;
